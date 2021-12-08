@@ -1,17 +1,32 @@
 import React from 'react';
-
-import HomePage from './pages/homepage/homepage.component';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 
+import HomePage from './pages/homepage/homepage.component';
+const HatsPage = () => (
+  <div>
+    <h1>HAts page</h1>
+  </div>
+);
 class App extends React.Component {
   render() {
     return (
-      <div className='App'>
-        <HomePage />
+      <div>
+        <Route exact path="/" component={HomePage} />
       </div>
     );
   }
 }
+// function App() {
+//   return (
+//     <div>
+//       <BrowserRouter>
+//         <Routes>
+//           <Route exact path="/" component={HomePage} />
+//         </Routes>{' '}
+//       </BrowserRouter>
+//     </div>
+//   );
+// }
 
 export default App;
